@@ -8,6 +8,7 @@ namespace SportsStore.Models
 {
     public static class SeedData
     {
+        //Gets its arguement from the startup
         public static void EnsurePopulated(IApplicationBuilder app)
         {
             StoreDbContext context = app.ApplicationServices
