@@ -33,16 +33,16 @@ namespace SportsStore.Infrastructure
         public override void Process(TagHelperContext context, 
             TagHelperOutput output)
         {
-            System.Diagnostics.Debug.WriteLine(context.ToString());
-            System.Diagnostics.Debug.WriteLine(ViewContext.ViewData.Model.ToString());
+            //System.Diagnostics.Debug.WriteLine(context.ToString());
+            //System.Diagnostics.Debug.WriteLine(ViewContext.ViewData.Model.ToString());
             IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
             TagBuilder result = new TagBuilder("div");
-            System.Diagnostics.Debug.WriteLine(result.ToString());
-            System.Diagnostics.Debug.WriteLine(urlHelper.Action());
+            //System.Diagnostics.Debug.WriteLine(result.ToString());
+            //System.Diagnostics.Debug.WriteLine(urlHelper.Action());
             for (int i = 1 ; i <= PageModel.TotalPages; i++)
 			{
                 TagBuilder tag = new TagBuilder("a");
-                System.Diagnostics.Debug.WriteLine(tag.InnerHtml.ToString());
+                //System.Diagnostics.Debug.WriteLine(tag.InnerHtml.ToString());
                 PageUrlValues["productPage"] = i;
                 tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
                 if (PageClassesEnabled)
@@ -51,17 +51,17 @@ namespace SportsStore.Infrastructure
                     tag.AddCssClass(i == PageModel.CurrentPage
                         ? PageClassSelected : PageClassNormal);
                 }
-                System.Diagnostics.Debug.WriteLine(tag.InnerHtml.ToString());
+                //System.Diagnostics.Debug.WriteLine(tag.InnerHtml.ToString());
 
-                tag.InnerHtml.Append(i.ToString() + " ");
-                System.Diagnostics.Debug.WriteLine(tag.InnerHtml.ToString());
-                System.Diagnostics.Debug.WriteLine(result);
+                tag.InnerHtml.Append(i.ToString());
+                //System.Diagnostics.Debug.WriteLine(tag.InnerHtml.ToString());
+                //System.Diagnostics.Debug.WriteLine(result);
                 result.InnerHtml.AppendHtml(tag);
-                System.Diagnostics.Debug.WriteLine(result);
+                //System.Diagnostics.Debug.WriteLine(result);
             }
-            System.Diagnostics.Debug.WriteLine(output.Content.GetContent()); 
+            //System.Diagnostics.Debug.WriteLine(output.Content.GetContent()); 
             output.Content.AppendHtml(result.InnerHtml);
-            System.Diagnostics.Debug.WriteLine(output.Content.GetContent());
+            //System.Diagnostics.Debug.WriteLine(output.Content.GetContent());
         }
     }
 }
