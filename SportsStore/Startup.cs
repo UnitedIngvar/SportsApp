@@ -41,6 +41,8 @@ namespace SportsStore
             services.AddDistributedMemoryCache();
             //registers the services used to access session data
             services.AddSession();
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
