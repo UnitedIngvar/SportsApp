@@ -71,3 +71,11 @@ C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projec
 C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\_CartLayout.cshtml.g.cs
 C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CartSummary\Default.cshtml.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Views\Order\Checkout.cshtml.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Completed.cshtml.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.RazorComponent.input.cache
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\_Imports.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.RazorComponent.output.cache
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\SportsStore.dll
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\_Imports.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Index.cshtml.g.cs

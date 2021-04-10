@@ -32,6 +32,7 @@ namespace SportsStore
                     Configuration["ConnectionStrings:SportsStoreConnection"]);
             });
             services.AddScoped<IStoreRepository, EFStoreRepository>();
+            services.AddScoped<IOrderRepository, EFOrderRepository>();
             services.AddRazorPages();
 
             //Servises to store session state to keep
@@ -41,8 +42,14 @@ namespace SportsStore
             services.AddDistributedMemoryCache();
             //registers the services used to access session data
             services.AddSession();
+            //The AddScoped method specifies that the same
+            //object should be used to satisfy related requests for Cart instances
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            //Provides access to HttpContextAccessor from any part of the program
+            //i.e in GetCart method (SessionCart class)
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //creates the services that Blazor uses
+            services.AddServerSideBlazor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,6 +82,10 @@ namespace SportsStore
                     new { Controller = "Home", action = "Index", productPage = 1 });
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
+
+                //registers the Blazor middleware components
+                endpoints.MapBlazorHub();
+                endpoints.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
             });
 
             SeedData.EnsurePopulated(app);
