@@ -10,4 +10,10 @@
     <link href="/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <base href="/" />
 </head>
+<body>
+    <!--The component element is used to insert a 
+        Razor Component in the output from the Razor Page-->
+    <component type="typeof(Routed)" render-mode="Server" />
+    <script src="/_framework/blazor.server.js"></script>
+</body>
 </html>
