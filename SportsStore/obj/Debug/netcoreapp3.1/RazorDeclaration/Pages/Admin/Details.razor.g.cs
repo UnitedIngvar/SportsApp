@@ -53,13 +53,33 @@ using SportsStore.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class AdminLayout : LayoutComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products/details/{id:long}")]
+    public partial class Details : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 18 "C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\Pages\Admin\Details.razor"
+ 
+    [Inject]
+    public IStoreRepository Repository { get; set; }
+
+    //Gets it from the URL parameter (See the calling page -> Products.razor)
+    [Parameter]
+    public long Id { get; set; }
+    public Product Product { get; set; }
+    protected override void OnParametersSet()
+    {
+        Product = Repository.Products.FirstOrDefault(p => p.ProductID == Id);
+    }
+    public string EditUrl => $"/admin/products/edit/{Product.ProductID}";
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

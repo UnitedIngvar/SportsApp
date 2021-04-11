@@ -53,13 +53,47 @@ using SportsStore.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class AdminLayout : LayoutComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/orders")]
+    public partial class Orders : OwningComponentBase<IOrderRepository>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 10 "C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\Pages\Admin\Orders.razor"
+       
+    public IOrderRepository Repository => Service;
+    public IEnumerable<Order> AllOrders { get; set; }
+    public IEnumerable<Order> UnshippedOrders { get; set; }
+    public IEnumerable<Order> ShippedOrders { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        await UpdateData();
+    }
+
+    public async Task UpdateData()
+    {
+        AllOrders = await Repository.Orders.ToListAsync();
+        UnshippedOrders = AllOrders.Where(o => !o.Shipped);
+        ShippedOrders = AllOrders.Where(o => o.Shipped);
+    }
+
+    public void ShipOrder(int id) => UpdateOrder(id, true);
+    public void ResetOrder(int id) => UpdateOrder(id, false);
+
+    private void UpdateOrder(int id, bool shipValue)
+    {
+        Order o = Repository.Orders.FirstOrDefault(o => o.OrderID == id);
+        o.Shipped = shipValue;
+        Repository.SaveOrder(o);
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

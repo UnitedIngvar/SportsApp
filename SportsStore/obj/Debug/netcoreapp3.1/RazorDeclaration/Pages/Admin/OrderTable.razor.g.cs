@@ -53,13 +53,28 @@ using SportsStore.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class AdminLayout : LayoutComponentBase
+    public partial class OrderTable : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 40 "C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\Pages\Admin\OrderTable.razor"
+ 
+    [Parameter]
+    public string TableTitle { get; set; } = "Orders";
+    [Parameter]
+    public IEnumerable<Order> Orders { get; set; }
+    [Parameter]
+    public string ButtonLabel { get; set; } = "Ship";
+    [Parameter]
+    public EventCallback<int> OrderSelected { get; set; }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

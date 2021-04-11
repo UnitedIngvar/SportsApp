@@ -79,3 +79,17 @@ C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projec
 C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\SportsStore.dll
 C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\_Imports.razor.g.cs
 C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Index.cshtml.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\AdminLayout.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Orders.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Products.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Routed.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\AdminLayout.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Orders.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Products.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Routed.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\OrderTable.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\OrderTable.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Details.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Details.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Editor.razor.g.cs
+C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Editor.razor.g.cs

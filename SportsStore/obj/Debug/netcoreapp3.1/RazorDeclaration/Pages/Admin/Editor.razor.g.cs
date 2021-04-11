@@ -53,13 +53,55 @@ using SportsStore.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class AdminLayout : LayoutComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products/edit/{id:long}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products/create")]
+    public partial class Editor : OwningComponentBase<IStoreRepository>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 47 "C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\Pages\Admin\Editor.razor"
+ 
+    public IStoreRepository Repository => Service;
+
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+
+    [Parameter]
+    public long Id { get; set; } = 0;
+
+    public Product Product { get; set; } = new Product();
+
+    protected override void OnParametersSet()
+    {
+        if (Id != 0)
+        {
+            Product = Repository.Products.FirstOrDefault(p => p.ProductID == Id);
+        }
+    }
+
+    public void SaveProduct()
+    {
+        if (Id == 0)
+        {
+            Repository.CreateProduct(Product);
+        }
+        else
+        {
+            Repository.SaveProduct(Product);
+        }
+        NavManager.NavigateTo("/admin/products");
+    }
+
+    public string ThemeColor => Id == 0 ? "primary" : "warning";
+    public string TitleText => Id == 0 ? "Create" : "Edit";
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
