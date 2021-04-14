@@ -63,7 +63,7 @@ using SportsStore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\Pages\Admin\Products.razor"
+#line 53 "C:\Users\Игорь Петров\OneDrive\Рабочий стол\ASP.NET_Projects\SportsSln\SportsStore\Pages\Admin\Products.razor"
  
     public IStoreRepository Repository => Service;
     public IEnumerable<Product> ProductData { get; set; }
@@ -78,8 +78,15 @@ using SportsStore.Models;
         ProductData = await Repository.Products.ToListAsync();
     }
 
+    public async Task DeleteProduct(Product p)
+    {
+        Repository.DeleteProduct(p);
+        await UpdateData();
+    }
+
     public string GetDetailsUrl(long id) => $"/admin/products/details/{id}";
     public string GetEditUrl(long id) => $"/admin/products/edit/{id}";
+    
 
 #line default
 #line hidden
